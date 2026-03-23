@@ -12,10 +12,10 @@ Este proyecto permite controlar un robot basado en la placa Makeblock directamen
 ## 🛠️ Requisitos Previos (Setup)
 
 1. **Cargar el programa al microcontrolador:**
-   * Abre el código `.ino` disponible en la carpeta de este repositorio con el IDE de Arduino.
+   * Abre el código `robot_brazo_V1.ino` disponible en la carpeta de este repositorio con el IDE de Arduino.
    * Utiliza como microcontrolador de destino Arduino UNO
 2. **Descargar la Web App:**
-   * Descarga el archivo `app_control.html` de este repositorio en tu ordenador. Guárdalo en una carpeta vacía destinada para ello.
+   * Descarga el archivo `app_control_brazo.html` de este repositorio en tu ordenador. Guárdalo en una carpeta vacía destinada para ello.
 
 ---
 
@@ -32,3 +32,57 @@ Sigue estos pasos para arrancar el centro de control:
    * El navegador te pedirá elegir un puerto serie. Selecciona el puerto COM correspondiente a tu Bluetooth. (Puede ser que en vez de COM aparezca directamente en la lista "Makeblock")
    * **Recomendación**: para evitar errores intenta que no haya ningún otro módulo bluetooth de Makeblock encendido para no encontrar varios en la lista de dispositivos accesibles.
 6. **Todo listo:** Usa los botones en pantalla para cambiar entre el modo Automático y Manual. En modo manual, puedes hacer clic en las flechas o usar las teclas **W, A, S, D, X** de tu teclado para mover el robot.
+
+# 📱 Versión Móvil (Android)
+
+## 🛠️ Requisitos Previos (Setup)
+
+1. **Cargar el programa al microcontrolador:**
+   * Abre el código `robot_brazo_V1.ino` disponible en la carpeta de este repositorio con el IDE de Arduino.
+   * Utiliza como microcontrolador de destino Arduino UNO
+
+## 📥 Cómo obtener la app
+
+Tienes dos opciones:
+
+1. **Instalación directa (.apk):**
+   * Descarga el archivo `Robot_brazo.apk` desde este repositorio.
+   * Ábrelo en tu dispositivo Android e instálalo.
+
+2. **Editar y compilar (.aia):**
+   * Descarga el archivo `Robot_brazo.aia`.
+   * Súbelo a MIT App Inventor (https://appinventor.mit.edu/).
+   * Modifica el proyecto si lo necesitas.
+   * Pulsa **Build** para generar la app.
+   * Escanea el QR que aparece para descargarla en tu móvil.
+
+> ⚠️ Es normal que aparezcan advertencias de seguridad al instalar. Ocurren porque la app no proviene de la Play Store. Debes aceptar los permisos para continuar.
+
+---
+
+## 🔗 Conexión y uso
+
+1. **Conectar por Bluetooth:**
+   * Ve a los ajustes de tu móvil.
+   * Conéctate al dispositivo `Makeblock`.
+   * ⚠️ No seleccionar `Makeblock_LE`.
+
+2. **Abrir la app:**
+   * Inicia la aplicación instalada.
+   * Pulsa el botón **Conectar**.
+   * Selecciona el dispositivo de la lista.
+
+   > Si no aparece ningún dispositivo:
+   > * Cierra y vuelve a abrir la app.
+   > * Asegúrate de que el Bluetooth está activado.
+
+   > Si no conecta:
+   > * Comprueba que nadie más está conectado.
+   > * Si el módulo tiene un LED azul fijo, ya está en uso.
+
+3. **Control del robot:**
+   * Usa los botones para mover el robot.
+   * Después de avanzar o girar, pulsa **X** para detenerlo.
+   * Para mover el brazo, mantén pulsado el botón:
+     * Al soltarlo, se detiene automáticamente.
+   * Usa el switch para cambiar entre modo **Manual** y **Automático**.
